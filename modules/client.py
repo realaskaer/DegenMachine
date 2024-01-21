@@ -63,6 +63,7 @@ class Client(Logger):
         try:
             if 'message' in error.args[0]:
                 error = error.args[0]['message']
+            return error
         except:
             pass
         return error
